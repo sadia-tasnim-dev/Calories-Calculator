@@ -1,6 +1,7 @@
-export const WantCook = ({ addWantCook, AddCurrentCook }) => {
+export const WantCook = ({ addWantCook, AddCurrentCook, removeRecipe }) => {
   const handleAddCurrentCook = (recipe) => {
     AddCurrentCook(recipe);
+    removeRecipe(recipe.recipeId);
   };
   return (
     <div>

@@ -1,6 +1,18 @@
 export const CurrentCook = ({ addCurrentCook }) => {
+  const total = addCurrentCook.reduce(
+    (totalObj, recipe) => {
+      totalObj.time += recipe.preparingTime;
+      totalObj.calories += recipe.calories;
+      return totalObj;
+    },
+    {
+      time: 0,
+      calories: 0,
+    }
+  );
+
   return (
-    <div>
+    <div className="ml-4">
       <h1 className="text-center text-2xl font-semibold border-b border-orange-200 pb-3">
         Currently Cooking Recipes : {addCurrentCook.length}
       </h1>
@@ -27,9 +39,9 @@ export const CurrentCook = ({ addCurrentCook }) => {
           <tr className=" bg-orange-100 text-[#727171] rounded-r-full font-bold">
             <td></td>
             <td className="text-center">Total: </td>
-            <td className="bg-green-100 text-center"> Minute</td>
+            <td className="bg-green-100 text-center">{total.time} Minute</td>
             <td className="bg-red-100 text-center">
-              <div> Calories</div>
+              {total.calories} Calories
             </td>
           </tr>
         </tbody>
