@@ -1,4 +1,7 @@
-export const WantCook = ({ addWantCook, handleAddCurrentCook }) => {
+export const WantCook = ({ addWantCook, AddCurrentCook }) => {
+  const handleAddCurrentCook = (recipe) => {
+    AddCurrentCook(recipe);
+  };
   return (
     <div>
       <h1 className="text-center text-2xl font-semibold border-b border-orange-200 pb-3">
@@ -25,7 +28,7 @@ export const WantCook = ({ addWantCook, handleAddCurrentCook }) => {
               <td className="pr-9">{wantCook.calories} Calories</td>
               <td className="pr-9">
                 <button
-                  onClick={() => handleAddCurrentCook(addWantCook)}
+                  onClick={() => handleAddCurrentCook(wantCook)}
                   className="bg-orange-400 text-white font-bold py-1 px-3 rounded-full"
                 >
                   Preparing

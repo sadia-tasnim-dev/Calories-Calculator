@@ -24,13 +24,11 @@ export const AllRecipes = () => {
         return;
       }
     }
-    const favRecipes = [...addWantCook, recipe];
-    setAddWantCook(favRecipes);
+    setAddWantCook([...addWantCook, recipe]);
   };
 
-  const handleAddCurrentCook = (recipe) => {
-    const CurrentRecipe = [...addCurrentCook, recipe];
-    setAddCurrentCook(CurrentRecipe);
+  const AddCurrentCook = (recipe) => {
+    setAddCurrentCook([...addCurrentCook, recipe]);
   };
 
   return (
@@ -44,9 +42,9 @@ export const AllRecipes = () => {
       <div className="flex justify-around border border-solid border-orange-300 rounded-3xl p-5">
         <WantCook
           addWantCook={addWantCook}
-          handleAddCurrentCook={handleAddCurrentCook}
+          AddCurrentCook={AddCurrentCook}
         ></WantCook>
-        <CurrentCook addCurrentCook={addCurrentCook}></CurrentCook>
+        <CurrentCook addCurrentCook={addCurrentCook} />
       </div>
       <h1 className="flex items-center gap-1 text-2xl font-bold mt-11">
         Our Recipes
