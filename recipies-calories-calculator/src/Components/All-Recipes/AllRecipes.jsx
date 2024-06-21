@@ -4,6 +4,7 @@ import { Recipe } from "../Recipe/Recipe";
 import { WantCook } from "../WantCook/WantCook";
 import { MdScale } from "react-icons/md";
 import { CurrentCook } from "../CurrentCook/CurrentCook";
+import { toast } from "sonner";
 
 export const AllRecipes = () => {
   const [recipes, setRecipes] = useState([]);
@@ -17,6 +18,12 @@ export const AllRecipes = () => {
   }, []);
 
   const handleAddWantCook = (recipe) => {
+    for (const wantCook of addWantCook) {
+      if (wantCook.recipeId === recipe.recipeId) {
+        toast.error("Already exist");
+        return;
+      }
+    }
     const favRecipes = [...addWantCook, recipe];
     setAddWantCook(favRecipes);
   };

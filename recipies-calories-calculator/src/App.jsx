@@ -1,3 +1,4 @@
+import { Toaster } from "sonner";
 import "./App.css";
 import { AllRecipes } from "./Components/All-Recipes/AllRecipes";
 
@@ -11,6 +12,7 @@ function App() {
       <div>
         <Hero></Hero>
         <AllRecipes></AllRecipes>
+        <Toaster richColors position="top-right"></Toaster>
       </div>
     </>
   );

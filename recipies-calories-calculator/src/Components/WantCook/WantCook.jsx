@@ -7,11 +7,11 @@ export const WantCook = ({ addWantCook, handleAddCurrentCook }) => {
 
       <table className=" text-[#a5a4a4]">
         <thead>
-          <th className="pr-7 pb-3">Serial</th>
-          <th className="pr-11 pb-3">Name</th>
-          <th className="pr-9 pb-3">Time</th>
-          <th className="pr-9 pb-3">Calories</th>
-          <th className="pr-9 pb-3">Action</th>
+          <th className="pr-7 py-3">Serial</th>
+          <th className="pr-11 py-3">Name</th>
+          <th className="pr-9 py-3">Time</th>
+          <th className="pr-9 py-3">Calories</th>
+          <th className="pr-9 py-3">Action</th>
         </thead>
         <tbody>
           {addWantCook.map((wantCook, index) => (
