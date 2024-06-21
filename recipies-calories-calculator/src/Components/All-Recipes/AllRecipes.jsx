@@ -31,6 +31,9 @@ export const AllRecipes = () => {
     setAddCurrentCook([...addCurrentCook, recipe]);
   };
 
+  const removeRecipe = (id) => {
+    setAddWantCook(addWantCook.filter((recipe) => recipe.recipeId !== id));
+  };
   return (
     <div>
       <h1 className="flex items-center gap-2 mt-11 text-2xl font-bold mb-7">
@@ -43,6 +46,7 @@ export const AllRecipes = () => {
         <WantCook
           addWantCook={addWantCook}
           AddCurrentCook={AddCurrentCook}
+          removeRecipe={removeRecipe}
         ></WantCook>
         <CurrentCook addCurrentCook={addCurrentCook} />
       </div>
