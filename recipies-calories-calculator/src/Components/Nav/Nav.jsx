@@ -1,9 +1,12 @@
 import { FaBalanceScaleRight } from "react-icons/fa";
 import { IoSearch } from "react-icons/io5";
 import { FaUserCircle } from "react-icons/fa";
+import { NavMenu } from "./NavMenu";
+
 export const Nav = () => {
   return (
     <div className="flex justify-between items-center">
+      <NavMenu />
       <div className="flex items-center gap-2 text-2xl font-bold">
         <h1>Recipe Calories-Cal</h1>
         <FaBalanceScaleRight className="text-orange-500 text-3xl" />

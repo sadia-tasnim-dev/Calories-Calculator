@@ -12,7 +12,7 @@ export const AllRecipes = () => {
   const [addCurrentCook, setAddCurrentCook] = useState([]);
 
   useEffect(() => {
-    fetch("./../../../public/recipes.json")
+    fetch("./recipes.json")
       .then((res) => res.json())
       .then((data) => setRecipes(data));
   }, []);
