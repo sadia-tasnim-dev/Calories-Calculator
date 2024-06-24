@@ -8,14 +8,14 @@ export const Nav = () => {
         <h1>Recipe Calories-Cal</h1>
         <FaBalanceScaleRight className="text-orange-500 text-3xl" />
       </div>
-      <ul className="flex gap-8 font-medium">
+      <ul className="hidden  lg:flex gap-8 font-medium">
         <li className="text-orange-600 underline">Home</li>
         <li>Recipes</li>
         <li>About</li>
         <li>Search</li>
       </ul>
       <div className="flex items-center gap-5">
-        <div className="flex gap-2 items-center bg-orange-100  px-5 py-1 rounded-full">
+        <div className="hidden  md:flex gap-2 items-center bg-orange-100  px-5 py-1 rounded-full">
           <IoSearch className="text-slate-500" />
           <input
             className="bg-transparent outline-none"

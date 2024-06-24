@@ -1,3 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+NG+Modern:wght@100..400&display=swap");
+
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+/* Track */
+*::-webkit-scrollbar-track {
+  border-radius: 100vh;
+  background: #f5e8da;
+}
+*::-webkit-scrollbar-thumb {
+  border-radius: 100vh;
+  background: #f3bc70;
+}
+
+.playwrite {
+  font-family: "Playwrite NG Modern", cursive;
+}

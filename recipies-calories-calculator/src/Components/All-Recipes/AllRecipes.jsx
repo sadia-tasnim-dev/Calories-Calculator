@@ -42,7 +42,7 @@ export const AllRecipes = () => {
           <MdScale />
         </span>
       </h1>
-      <div className="flex justify-around border border-solid border-orange-300 rounded-3xl p-5">
+      <div className="flex flex-col justify-center lg:flex-row lg:justify-around border border-solid border-orange-300 rounded-3xl p-5">
         <WantCook
           addWantCook={addWantCook}
           AddCurrentCook={AddCurrentCook}
@@ -56,7 +56,7 @@ export const AllRecipes = () => {
           <MdOutlineFoodBank />
         </span>
       </h1>
-      <div className="grid grid-cols-3 gap-4  mt-7">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4  mt-7">
         {recipes.map((recipe) => (
           <Recipe
             key={recipe.recipeId}
