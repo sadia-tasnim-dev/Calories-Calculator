@@ -5,6 +5,7 @@ import { WantCook } from "../WantCook/WantCook";
 import { MdScale } from "react-icons/md";
 import { CurrentCook } from "../CurrentCook/CurrentCook";
 import { toast } from "sonner";
+import { IoIosArrowForward } from "react-icons/io";
 
 export const AllRecipes = () => {
   const [recipes, setRecipes] = useState([]);
@@ -64,6 +65,17 @@ export const AllRecipes = () => {
             recipe={recipe}
           ></Recipe>
         ))}
+      </div>
+      <div className=" mt-4 flex gap-3 justify-end ">
+        <button className="bg-amber-400 px-3 py-1 text-white font-bold rounded-xl">
+          1
+        </button>
+        <button className="bg-amber-400 px-3 py-1 text-white font-bold rounded-xl">
+          2
+        </button>
+        <button className="border px-2 py-1 border-amber-400  text-amber-400 font-bold text-2xl rounded-xl">
+          <IoIosArrowForward />
+        </button>
       </div>
     </div>
   );

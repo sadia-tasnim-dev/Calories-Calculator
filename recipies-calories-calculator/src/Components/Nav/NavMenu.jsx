@@ -23,7 +23,7 @@ export const NavMenu = () => {
             About
           </li>
           <li className=" hover:text-orange-800 hover:bg-amber-100 px-8 rounded-xl">
-            Search
+            Guide
           </li>
         </ul>
       )}

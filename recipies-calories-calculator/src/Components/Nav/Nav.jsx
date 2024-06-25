@@ -15,7 +15,7 @@ export const Nav = () => {
         <li className="text-orange-600 underline">Home</li>
         <li>Recipes</li>
         <li>About</li>
-        <li>Search</li>
+        <li>Guide</li>
       </ul>
       <div className="flex items-center gap-5">
         <div className="hidden  md:flex gap-2 items-center bg-orange-100  px-5 py-1 rounded-full">
